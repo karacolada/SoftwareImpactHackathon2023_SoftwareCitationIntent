@@ -1,4 +1,4 @@
-# Hackathon-Template
+# Software Impact Hackathon 2023: Scientific Software Citation Intent
 
 This is a template repo for external hackathon projects. Please build your project off of this template:
 1. Click the ‘use this template’ button above to create a new repository, and choose an appropriate name for your project. The suggested naming scheme is: `SoftwareImpactHackathon2023_PROJECT`.
