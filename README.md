@@ -136,6 +136,14 @@ For multi-class precision, recall and F1-score, we used the macro average method
 | GPT3.5 | finetuned with context | test split (n=837) | 0.82 | 0.81 | 0.82 | 0.88 |
 | GPT3.5 | finetuned with context | CZI validation (n=410) | 0.42 | 0.42 | 0.41 | 0.8 |
 
+## Key takeaways
+
+- For GPT3.5 prompt engineering requires time and careful crafting
+  - Responses also take longer because the model has to think through each answer
+- Fine-tuning take ~1hr for training but inference is really fast: ~1.5 min for ~800 sentences
+- Tuning things it’s really hard - you can’t change any hyperparameters besides num_epochs, so the only tuning you can really do is early stopping when training - it’s not as flexible as Huggingface API in letting you interact with the models
+
+
 ## References 
 
 *Please do not modify or delete any other part of the readme below this line.*
