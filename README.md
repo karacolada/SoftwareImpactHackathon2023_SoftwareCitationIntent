@@ -63,6 +63,52 @@ All datasets are also located in the [`data`](data/) folder, with documentation 
 
 ## Training Language Models
 
+We explored finetuning several BERT language models for classifying software mentions based on their intent, namely BERT, SciBERT and PubMedBERT. Moreover, we finetuned ChatGPT-3 using three different strategies: zero-shot learning, few-shot learning and finetuning.
+
+The code for finetuning the BERT models is located in [`BERT_finetuning`](BERT_finetuning/).
+
+For zero-shot learning, the prompt used was
+
+```
+initial_message = [{"role": "system",
+"content": "You are a scientist trying to figure out the citation intent behind software mentioned in sentences coming from research articles. Your four categories are: usage, creation, mention, or none. The definitions of the classes are: \
+- usage: software was used in the paper \
+- creation: software was created by the authors of the paper \
+- mention: software was mentioned in the paper, but not used, nor created \
+- none: none of the previous 3 categories apply \
+You need to output one category only."}]
+```
+
+For few-shot learning, the prompt was
+
+```
+num_examples = 5
+initial_message = [{"role": "system",
+"content": "You are a scientist trying to figure out the citation intent behind software mentioned in sentences coming from research articles. Your four categories are: usage, creation, mention, or none. The definitions of the classes are: \
+- usage: software was used in the paper \
+- creation: software was created by the authors of the paper \
+- mention: software was mentioned in the paper, but not used, nor created \
+- none: none of the previous 3 categories apply \
+You need to output one category only."}]
+for example in examples_used:
+initial_message += [{"role": "user", "content" : example}]
+initial_message += [{"role": "assistant", "content" : 'usage'}]
+for example in examples_created:
+initial_message += [{"role": "user", "content" : example}]
+initial_message += [{"role": "assistant", "content" : 'creation'}]
+for example in examples_mentioned:
+initial_message += [{"role": "user", "content" : example}]
+initial_message += [{"role": "assistant", "content" : 'mention'}]
+for example in examples_none:
+initial_message += [{"role": "user", "content" : example}]
+initial_message += [{"role": "assistant", "content" : 'none'}]
+```
+
+For finetuning Chat-GPT 3.5, we employed early stopping (n_epochs = 2) based on previous run:
+
+![Loss](images/finetuning_ChatGPT.png)
+
+
 ## Evaluation 
 
 ## References 
