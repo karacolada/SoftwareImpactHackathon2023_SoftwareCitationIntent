@@ -110,9 +110,11 @@ For finetuning Chat-GPT 3.5, we employed early stopping (n_epochs = 2) based on 
 
 ## Evaluation 
 
+For multi-class precision, recall and F1-score, we used the macro average method.
+
 | model | method | test set | precision | recall | F1 | accuracy |
 | --- | --- | --- | --- | --- | --- | --- |
-| BERT | finetuned-sentence | test split (n=838) | tbd | tbd | tbd | tbd |
+| BERT | finetuned-sentence | test split (n=838) | 0.86 | 0.88 | 0.87 | 0.91 |
 | distilBERT | finetuned-sentence | test split (n=838) | 0.85 | 0.85 | 0.85 | 0.9 |
 | distilBERT | finetuned-sentence | CZI validation (n=410) | 0.47 | 0.5 | 0.48 | 0.83 |
 | SciBERT | finetuned-sentence | test split (n=843) | 0.76 | 0.96 | 0.85 | 0.81 |
