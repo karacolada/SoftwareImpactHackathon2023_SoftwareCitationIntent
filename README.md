@@ -34,7 +34,7 @@ We analyzed a few different schemes of citation contexts/intents for regular res
 
 We further established two principles behind our own scheme: 
 1. Citations are shared, deposited as they are based on URIs, hence point to “things on the (open) web;” 
-2. We are after the **impact** of software cited in scholarly articles, so authors of created and cited software should get credit for their work.
+2. We are striving to understand the **impact** of software cited in scholarly articles, so authors of created and cited software should get credit for their work.
    
 Based on the above principles and other systems, we proposed the following three categories in our scheme of research software citation intent:
 - **Paper <describe_creation_of> Software:** the paper describes or acknowledges the creation of a research software. It is corresponding to the Created category in SoftCite and Creation in SoMeSci.
