@@ -57,7 +57,7 @@ the citing sentence
 The leading sentence, the citing sentence, and the trailing sentence
 In addition, we created a [dataset of 1,000 unlabeled citation contexts](https://docs.google.com/spreadsheets/d/1yY1vB_v-1FjVV-VQ8rye84wB8dN5kGh8da4fom8KQwk/edit#gid=1940780993) that could be used for negative training examples.
 
-For evaluation, we used a dataset of 411 samples [curated by CZI](https://docs.google.com/spreadsheets/d/1WaM0uqk0I-kFN6MAA5aJwRNGMJClXXUjqddoX0uYsg4/edit#gid=0).
+For evaluation, we used a dataset of 411 samples [curated by CZI](https://docs.google.com/spreadsheets/d/1WaM0uqk0I-kFN6MAA5aJwRNGMJClXXUjqddoX0uYsg4/edit#gid=0). This dataset was manually curated by reviewing sentences that contain mentions of software names; the dataset was initially curated before the hackathon using a more granular intent classification which was subsequently mapped to the intent classification described above (creation, used, mention). 
 
 All datasets are also located in the [`data`](data/) folder, with documentation in the respective [README](data/README.md).
 
