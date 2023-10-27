@@ -63,7 +63,7 @@ All datasets are also located in the [`data`](data/) folder, with documentation 
 
 ## Training Language Models
 
-We explored finetuning several BERT language models for classifying software mentions based on their intent, namely BERT, SciBERT and PubMedBERT. Moreover, we finetuned ChatGPT-3 using three different strategies: zero-shot learning, few-shot learning and finetuning.
+We explored finetuning several BERT language models for classifying software mentions based on their intent, namely BERT, distilBERT, SciBERT and PubMedBERT. Moreover, we finetuned ChatGPT-3 using three different strategies: zero-shot learning, few-shot learning and finetuning.
 
 The code for finetuning the BERT models is located in [`BERT_finetuning`](BERT_finetuning/).
 
@@ -108,8 +108,31 @@ For finetuning Chat-GPT 3.5, we employed early stopping (n_epochs = 2) based on 
 
 ![Loss](images/finetuning_ChatGPT.png)
 
-
 ## Evaluation 
+
+| model | method | test set | precision | recall | F1 | accuracy |
+| --- | --- | --- | --- | --- | --- | --- |
+| BERT | finetuned-sentence | test split (n=838) | tbd | tbd | tbd | tbd |
+| distilBERT | finetuned-sentence | test split (n=838) | 0.85 | 0.85 | 0.85 | 0.9 |
+| distilBERT | finetuned-sentence | CZI validation (n=410) | 0.47 | 0.5 | 0.48 | 0.83 |
+| SciBERT | finetuned-sentence | test split (n=843) | 0.76 | 0.96 | 0.85 | 0.81 |
+| SciBERT | finetuned-sentence | CZI validation (n=410) | 0.32 | 0.34 | 0.32 | 0.74 |
+| SciBERT | finetuned-context | test split (n=843) | 0.79 | 0.94 | 0.86 | 0.81 |
+| SciBERT | finetuned-context | CZI validation (n=410) | 0.31 | 0.32 | 0.31 | 0.82 |
+| PubmedBERT | finetuned-sentence | test split (n=838) | 0.87 | 0.88 | 0.88 | 0.92 |
+| PubmedBERT | finetuned-sentence | CZI validation (n=410) | 0.28 | 0.3 | 0.29 | 0.82 |
+| GPT3.5 | zero-shot | test split (n=837) | 0.69 | 0.62 | 0.64 | 0.74 |
+| GPT3.5 | zero-shot | CZI validation (n=410) | 0.36 | 0.44 | 0.37 | 0.69 |
+| GPT3.5 | few-shot | test split (n=837) | 0.59 | 0.54 | 0.53 | 0.62 |
+| GPT3.5 | few-shot | CZI validation (n=410) | 0.34 | 0.39 | 0.29 | 0.51 |
+| GPT3.5 | few-shot (context) | test split (n=837) | 0.41 | 0.39 | 0.48 | 0.67 |
+| GPT3.5 | few-shot (context) | CZI validation (n=410) | 0.37 | 0.39 | 0.31 | 0.51 |
+| GPT3.5 | finetuned | test split (n=837) | 0.87 | 0.86 | 0.86 | 0.91 |
+| GPT3.5 | finetuned | CZI validation (n=410) | 0.54 | 0.48 | 0.5 | 0.86 |
+| GPT3.5 | finetuned early stopping | test split (n=837) | 0.81 | 0.81 | 0.81 |0.88 |
+| GPT3.5 | finetuned early stopping | CZI validation (n=410) | 0.38 | 0.37 | 0.35 | 0.82 |
+| GPT3.5 | finetuned with context | test split (n=837) | 0.82 | 0.81 | 0.82 | 0.88 |
+| GPT3.5 | finetuned with context | CZI validation (n=410) | 0.42 | 0.42 | 0.41 | 0.8 |
 
 ## References 
 
