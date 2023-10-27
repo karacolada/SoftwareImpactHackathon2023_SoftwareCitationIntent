@@ -57,7 +57,17 @@ the citing sentence
 The leading sentence, the citing sentence, and the trailing sentence
 In addition, we created a [dataset of 1,000 unlabeled citation contexts](https://docs.google.com/spreadsheets/d/1yY1vB_v-1FjVV-VQ8rye84wB8dN5kGh8da4fom8KQwk/edit#gid=1940780993) that could be used for negative training examples.
 
+The distribution of labels in this dataset is as follows:
+
+![label distribution](images/label_distribution_training_data.png)
+
+![word count](images/word_count.png)
+
 For evaluation, we used a dataset of 411 samples [curated by CZI](https://docs.google.com/spreadsheets/d/1WaM0uqk0I-kFN6MAA5aJwRNGMJClXXUjqddoX0uYsg4/edit#gid=0). This dataset was manually curated by reviewing sentences that contain mentions of software names; the dataset was initially curated before the hackathon using a more granular intent classification which was subsequently mapped to the intent classification described above (creation, used, mention). 
+
+The label distribution is as follows:
+
+![label distribution CZI](images/label_distribution_czi.png)
 
 All datasets are also located in the [`data`](data/) folder, with documentation in the respective [README](data/README.md).
 
@@ -135,6 +145,8 @@ For multi-class precision, recall and F1-score, we used the macro average method
 | GPT3.5 | finetuned early stopping | CZI validation (n=410) | 0.38 | 0.37 | 0.35 | 0.82 |
 | GPT3.5 | finetuned with context | test split (n=837) | 0.82 | 0.81 | 0.82 | 0.88 |
 | GPT3.5 | finetuned with context | CZI validation (n=410) | 0.42 | 0.42 | 0.41 | 0.8 |
+
+More granular metrics on the GPT3.5 finetuning are included as screenshots in [`images/`](images/).
 
 ## Key takeaways
 
