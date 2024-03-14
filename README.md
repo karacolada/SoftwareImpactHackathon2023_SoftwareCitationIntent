@@ -122,11 +122,12 @@ For finetuning Chat-GPT 3.5, we employed early stopping (n_epochs = 2) based on 
 
 For multi-class precision, recall and F1-score, we used the macro average method.
 
-| model | method | test set | precision | recall | F1 | accuracy |
-| --- | --- | --- | --- | --- | --- | --- |
-| BERT | finetuned-sentence | test split (n=838) | 0.86 | 0.88 | 0.87 | 0.91 |
-| distilBERT | finetuned-sentence | test split (n=838) | 0.85 | 0.85 | 0.85 | 0.9 |
-| distilBERT | finetuned-sentence | CZI validation (n=410) | 0.47 | 0.5 | 0.48 | 0.83 |
+| model | method | test set | precision (overall) | recall (overall) | F1 (overall) | accuracy (overall) | P (Creation) | R (Creation) | F1 (Creation) |P (Mention) | R (Mention) | F1 (Mention) |P (Usage) | R (Usage) | F1 (Usage) |P (Unlabelled) | R (Unlabelled) | F1 (Unlabelled) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |--- | --- | --- |--- | --- | --- |--- | --- | --- |
+| BERT | finetuned-sentence | test split (n=838) | 0.866 | 0.859 | 0.862 | 0.903 | 0.90 | 0.87 | 0.88 | 0.71 | 0.69 | 0.70 | 0.93 | 0.94 | 0.94 | 0.92 | 0.94 | 0.93 |
+| BERT | finetuned-sentence | CZI validation (n=410) | 0.323 | 0.368 | 0.335 | 0.771 | 0.00 | 0.00 | 0.00 | 0.15 | 0.29 | 0.20 | 0.94 | 0.85 | 0.90 | 0.20 | 0.33 | 0.2 |
+| distilBERT | finetuned-sentence | test split (n=838) | 0.823 | 0.826 | 0.824 | 0.884 | 0.86 | 0.81 | 0.84 | 0.59 | 0.62 | 0.61 | 0.95 | 0.93 | 0.94 | 0.90 | 0.95 | 0.92 |
+| distilBERT | finetuned-sentence | CZI validation (n=410) | 0.481|0.412| 0.443 | 0.801 | 0.71 |0.50|0.59| 0.29 | 0.26 | 0.27 | 0.94 | 0.88 | 0.91 | 0.00 | 0.00 | 0.00 |
 | SciBERT | finetuned-sentence | test split (n=843) | 0.76 | 0.96 | 0.85 | 0.81 |
 | SciBERT | finetuned-sentence | CZI validation (n=410) | 0.32 | 0.34 | 0.32 | 0.74 |
 | SciBERT | finetuned-context | test split (n=843) | 0.79 | 0.94 | 0.86 | 0.81 |
