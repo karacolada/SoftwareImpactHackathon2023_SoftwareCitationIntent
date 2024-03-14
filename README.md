@@ -128,24 +128,27 @@ For multi-class precision, recall and F1-score, we used the macro average method
 | BERT | finetuned-sentence | CZI validation (n=410) | 0.323 | 0.368 | 0.335 | 0.771 | 0.00 | 0.00 | 0.00 | 0.15 | 0.29 | 0.20 | 0.94 | 0.85 | 0.90 | 0.20 | 0.33 | 0.2 |
 | distilBERT | finetuned-sentence | test split (n=838) | 0.823 | 0.826 | 0.824 | 0.884 | 0.86 | 0.81 | 0.84 | 0.59 | 0.62 | 0.61 | 0.95 | 0.93 | 0.94 | 0.90 | 0.95 | 0.92 |
 | distilBERT | finetuned-sentence | CZI validation (n=410) | 0.481|0.412| 0.443 | 0.801 | 0.71 |0.50|0.59| 0.29 | 0.26 | 0.27 | 0.94 | 0.88 | 0.91 | 0.00 | 0.00 | 0.00 |
-| SciBERT | finetuned-sentence | test split (n=843) | 0.76 | 0.96 | 0.85 | 0.81 |
-| SciBERT | finetuned-sentence | CZI validation (n=410) | 0.32 | 0.34 | 0.32 | 0.74 |
-| SciBERT | finetuned-context | test split (n=843) | 0.79 | 0.94 | 0.86 | 0.81 |
-| SciBERT | finetuned-context | CZI validation (n=410) | 0.31 | 0.32 | 0.31 | 0.82 |
-| PubmedBERT | finetuned-sentence | test split (n=838) | 0.87 | 0.88 | 0.88 | 0.92 |
-| PubmedBERT | finetuned-sentence | CZI validation (n=410) | 0.28 | 0.3 | 0.29 | 0.82 |
-| GPT3.5 | zero-shot | test split (n=837) | 0.69 | 0.62 | 0.64 | 0.74 |
-| GPT3.5 | zero-shot | CZI validation (n=410) | 0.36 | 0.44 | 0.37 | 0.69 |
-| GPT3.5 | few-shot | test split (n=837) | 0.59 | 0.54 | 0.53 | 0.62 |
-| GPT3.5 | few-shot | CZI validation (n=410) | 0.34 | 0.39 | 0.29 | 0.51 |
-| GPT3.5 | few-shot (context) | test split (n=837) | 0.41 | 0.39 | 0.48 | 0.67 |
-| GPT3.5 | few-shot (context) | CZI validation (n=410) | 0.37 | 0.39 | 0.31 | 0.51 |
-| GPT3.5 | finetuned | test split (n=837) | 0.87 | 0.86 | 0.86 | 0.91 |
-| GPT3.5 | finetuned | CZI validation (n=410) | 0.54 | 0.48 | 0.5 | 0.86 |
-| GPT3.5 | finetuned early stopping | test split (n=837) | 0.81 | 0.81 | 0.81 |0.88 |
-| GPT3.5 | finetuned early stopping | CZI validation (n=410) | 0.38 | 0.37 | 0.35 | 0.82 |
-| GPT3.5 | finetuned with context | test split (n=837) | 0.82 | 0.81 | 0.82 | 0.88 |
-| GPT3.5 | finetuned with context | CZI validation (n=410) | 0.42 | 0.42 | 0.41 | 0.8 |
+| SciBERT | finetuned-sentence | test split (n=843) | 0.85 | 0.846 | 0.846 | 0.906 | 0.89 | 0.77 | 0.82 | 0.63 | 0.68 | 0.65 | 0.96 | 0.95 | 0.95 | 0.93 | 0.99 | 0.96 |
+| SciBERT | finetuned-sentence | CZI validation (n=410) | 0.302 | 0.308 | 0.306 | 0.80 | 0.00 | 0.00 | 0.00 | 0.27 | 0.35 | 0.30 | 0.95 | 0.90 | 0.92 | 0.00 | 0.00 | 0.00 |
+| PubmedBERT | finetuned-sentence | test split (n=838) | 0.867  | 0.891 | 0.88 | 0.919 | 0.88 | 0.88 | 0.88 | 0.69 | 0.78 | 0.73 | 0.97 | 0.93 | 0.95 | 0.94 | 0.97 | 0.96 |
+| PubmedBERT | finetuned-sentence | CZI validation (n=410) | 0.319 | 0.392 | 0.342 | 0.81 | 0.00 | 0.00 | 0.00 | 0.28 | 0.39 |0.33|0.94|0.91|0.93| 0.00 | 0.00 | 0.00 |
+| GPT3.5 | zero-shot | test split (n=837) |0.7  | 0.608 | 0.627 | 0.717 | 0.77 | 0.46 | 0.57 | 0.24 | 0.47 | 0.32 | 0.84 |0.86 | 0.85 | 0.96 | 0.65 | 0.77 |
+| GPT3.5 | zero-shot | CZI validation (n=410) | 0.464 | 0.511 | 0.478 | 0.8 | 0.55 | 0.6 | 0.57 | 0.35 | 0.61 | 0.44 | 0.96 | 0.84 | 0.89 | 0.00 | 0.00 | 0.00 |
+| GPT3.5 | few-shot | test split (n=837) | 0.59 | 0.617  | 0.556 | 0.54 | 0.612 | 0.81 | 0.46 | 0.59 | 0.28 | 0.24 | 0.26 | 0.93 | 0.57 | 0.71 | 0.45 | 0.95 | 0.61 |
+| GPT3.5 | few-shot | CZI validation (n=410) | 0.525 | 0.291 | 0.373 | 0.457 | 0.5 | 0.3 | 0.37 | 0.6 | 0.39 | 0.47 | 1.00 | 0.47 | 0.64 |  0.00 | 0.00 | 0.00 |
+| GPT3.5 | few-shot (context) | test split (n=837) | 0.546  | 0.512 | 0.463 | 0.5 | 0.72 | 0.57 | 0.64 | 0.21 | 0.15 | 0.17 | 0.88 | 0.35 | 0.5 | 0.38 | 0.98 | 0.55 |
+| GPT3.5 | few-shot (context) | CZI validation (n=410) | 0.454 | 0.195 | 0.269 | 0.338 | 0.5 | 0.2 | 0.29 | 0.33 | 0.22 | 0.26 | 0.98 | 0.36 | 0.53 | 0.0 | 0.0 | 0.0 |
+| GPT3.5 | finetuned | test split (n=837) | 0.839|0.867|0.851|0.9| 0.8 | 0.91 | 0.85 | 0.65 | 0.69 | 0.67 | 0.97 | 0.93 | 0.95 | 0.94 | 0.93 | 0.94 |
+| GPT3.5 | finetuned | CZI validation (n=410) | 0.571 | 0.531|0.545|0.881| 0.71 | 0.5 | 0.59 | 0.59 | 0.7 | 0.64 | 0.98 | 0.93 | 0.95 | 0.00 | 0.00 | 0.00 |
+| GPT3.5 | finetuned with context | test split (n=837) | 0.766  | 0.808 | 0.783 | 0.857 | 0.66 | 0.88 | 0.76 | 0.49 | 0.52 | 0.51 | 0.96 | 0.88 | 0.92 | 0.95 | 0.95 | 0.95 |
+| GPT3.5 | finetuned with context | CZI validation (n=410) | 0.553 | 0.503 | 0.509 | 0.819 | 0.83 | 0.5 | 0.62 | 0.41 | 0.65 | 0.5 | 0.97 | 0.86 | 0.91 | 0.00 | 0.00 | 0.00 |
+| GPT4 | zero-shot | test split (n=837) |0.684  | 0.662 | 0.664 | 0.815 | 0.73 | 0.70 | 0.71 | 0.26 | 0.11 | 0.15 | 0.83 | 0.96 | 0.89 | 0.92 | 0.88 | 0.90 |
+| GPT4 | zero-shot | CZI validation (n=410) |0.473 | 0.544 | 0.495 | 0.8 | 0.58 | 0.70 | 0.64 | 0.35 | 0.65 | 0.45 | 0.96 | 0.82 | 0.89 | 0.00 | 0.00 | 0.00 |
+| GPT4 | few-shot | test split (n=837) | 0.746|0.736|0.738|0.839| 0.74 | 0.62 | 0.67 | 0.46 | 0.44 | 0.45 | 0.93 | 0.91 | 0.92 | 0.86 | 0.97 | 0.91 |
+| GPT4 | few-shot | CZI validation (n=410) | 0.473 | 0.385 | 0.421 | 0.614 | 0.7 | 0.7 | 0.7 | 0.21 | 0.17 | 0.19 | 0.98 | 0.67 | 0.79 | 0.0 | 0.0 | 0.0 |
+| GPT4 | few-shot (context) | test split (n=837) | 0.716  | 0.73 | 0.716 | 0.832 | 0.68 | 0.82 | 0.74 | 0.43 | 0.26 | 0.33 | 0.92 | 0.91 | 0.92 | 0.83 | 0.93 | 0.87 |
+| GPT4 | few-shot (context) | CZI validation (n=410) | 0.399 | 0.206 | 0.269 | 0.471 | 0.5 | 0.2 | 0.29 | 0.11 | 0.09 | 0.1 | 0.99 | 0.54 | 0.7 | 0.00 | 0.00 | 0.00 |
+
 
 More granular metrics on the GPT3.5 finetuning are included as screenshots in [`images/`](images/).
 
